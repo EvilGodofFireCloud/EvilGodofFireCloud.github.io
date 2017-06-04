@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[安装Caffe遇到的一些问题]]></title>
+    <url>%2F2017%2F06%2F04%2Fcaffe-issues%2F</url>
+    <content type="text"><![CDATA[所有问题 形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff]]></content>
+      <tags>
+        <tag>caffe issues</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[处理hexo和MathJax兼容的问题]]></title>
+    <url>%2F2017%2F06%2F04%2F%E5%A4%84%E7%90%86hexo%E5%92%8CMathJax%E5%85%BC%E5%AE%B9%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[处理hexo和MathJax兼容的问题问题及原因在用MathJax处理公式的时候发现一个问题，如果有两个含有下划线的公式，比如这句1a_t和b_t 会将其解析成1a&lt;em&gt;t和b&lt;/em&gt;t 原因是当hexo的markdown解析器遇到两个’_’时会自动解析成，与MathJax冲突。 改正方法在hexo的文件夹下找到marked.js，一般会在1hexo\node_modules\hexo-renderer-marked\node_modules\marked\lib\marked.js 在约459行找到该句1em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, 把’|’左边的去掉，改成：1em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, 在约490行找到该句1em: /^_(?=\S)([\s\S]*?\S)_(?!_)|^\*(?=\S)([\s\S]*?\S)\*(?!\*)/ 把’|’左边的去掉，改成：1em: /^\*(?=\S)([\s\S]*?\S)\*(?!\*)/ 最后用1hexo clean &amp; hexo g 重新生成网页，公式解析正常。]]></content>
+      <tags>
+        <tag>hexo issues</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning]]></title>
+    <url>%2F2017%2F06%2F03%2Fadnet%2F</url>
+    <content type="text"><![CDATA[论文阅读：Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning本文使用深度强化学习来解决目标跟踪。项目地址:https://sites.google.com/view/cvpr2017-adnet 概述本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。 问题设置 本文提出的ADNet网络架构如Fig.1。本文使用ADNet预测动作，根据预测的动作确定下一帧的目标的位置。本文使用Deep Reinforcement Learning的定义如下。 Action 本文使用了11个Action。分别是向左，向上，向右和向下四种方向以及2倍距离的这四种方向。其余三种Action分别是尺度变小，尺度变大，以及终止（在每一帧网络都会顺序输出若干个action，当action是终止时完成此帧的跟踪），如Fig.2所示。每个Action使用11维的向量进行one-hot编码，如\((1,0,0,0,0,0,0,0,0,0,0)\)，\((0,1,0,0,0,0,0,0,0,0,0)\)等。 State 本文状态\(s_t\)用一个元组表示,\(s_t = (p_t, d_t)\)。其中\( {p_t} \in {\mathbb{R}^{112 \times 112 \times 3}}\ \)表示由上一帧bounding box确定的图像块patch。\( d_t\)表示t时刻之前的\(k(=10)\)个action向量（由于目标运动的持续性，利用之前的action可以捕捉目标motion，同时可以避免振荡现象）。每个patch用4-d的向量\( b_t \)表示，\( {b_t} = [{x^{(t)}},{y^{(t)}},{w^{(t)}},{h^{(t)}}] \)。在t帧时图像块\( p_t \)根据 $${p_t} = \phi ({b_t},F)$$ 其中\(\phi \)表示预处理函数，即从图像\(F \)中截取\(b_t \)对应的图像块。 State transition function 状态转移函数状态转移函数包括两部分，图像块转移函数\(f_p \)和动态转移函数\(f_d \)。 下一个patch的位置根据 $$b_{t+1} = f_p(b_t,a_t)$$ 获得。 移动的单位大小是 $$\Delta {x^{(t)}} = \alpha {w^{(t)}}, \Delta {y^{(t)}} = \alpha {h^{(t)}}$$ 其中\(\alpha = 0.03\)，比如当action是’left’的时候，下一个patch的位置是\(b_{t+1} = [{x^{(t)}}-\Delta {x^{(t)}},{y^{(t)}},{w^{(t)}},{h^{(t)}}] \)；当action是’scale up’的时候，下一个patch的位置则是\(b_{t+1} = [{x^{(t)}},{y^{(t)}},{w^{(t)}}+\Delta {x^{(t)}},{h^{(t)}}+\Delta {y^{(t)}}]\)。 动态函数\(d_{t+1} = f_p(d_t,a_t)\)，表示action history。\(f_p\)其实就是一个队列。 Reward 回报函数定义成\(r(s)\)而不是\(r(s,a)\)因为每一帧都有若干个动作，最后一个动作\(a_T\)一定是’stop’，只需要看最后的状态即可。那么回报函数只看执行最后一个动作后的状态\(s_T\)，定义如下： \(G\)是groundtruth，\(IoU\)是交并比函数。跟踪score \(z_t\)定义成该帧终止时的reward \(r(s_T)\)，该score与平时接触到的跟踪算法一样是用来更新模型的。 Action-Decision Network本文使用训练好的VGG-M模型作为基础模型用来初始化卷积层部分。最后的两个卷积层fc6和fc7用来预测action的概率和状态的置信度。fc6输出各种action的概率，执行概率最高的action。当action是’stop’时完成当前帧的跟踪。注意到，因为每一帧都会执行若干个action，所以有可能出现振荡（oscillation）的现象。比如依次执行{left,right}或者{down,up}目标会来回移动。fc7输出当前状态是前景/背景的confidence，根据前者用来更新模型。 ADNet的训练ADNet的训练包括supervised learning 和reinforcement learning。使用supervised learning 训练使得能够预测出某个状态下的action，这一部分应该在单帧的图片完成的。在reinforcement learning中，网络通过在训练视频上的模拟跟踪以及利用action history来更新。通过这两部分训练的网络可以实现跟踪。 Supervised Learning（SL）SL的训练样本是图像块\( \{ p_j \} \)，action labels \( \{ o_j^{(act)} \} \)和class labels \( \{ o_j^{(cls)} \} \)。损失函数是一个多任务损失函数。定义如下 $${L_{SL}} = \frac{1}{m}\sum\limits_{j = 1}^m {L(o_j^{(act)},\hat o_j^{(act)})} + \frac{1}{m}\sum\limits_{j = 1}^m {L(o_j^{(cls)},\hat o_j^{(cls)})}$$ 带^的是预测值，其中两个真实值的定义如下： $$o_j^{(act)} = \arg \mathop {\max }\limits_a IoU(\bar f({p_j},a),G)$$ 就是说选择与groundtruth IoU最大的那个action（从11个action中选取）作为真实值。另外一个是 Reinforcement Learning (RL)在RL阶段，初始化的网络选用SL得到的网络，除了fc7外其余的参数全部需要训练。训练的时候，随机挑选一段序列)。通过跟踪模拟实现RL，一次模拟可以产生一系列状态\( \{ s_{t,l} \} \)，对应的actions \( \{ a_{t,l} \} \)以及rewards \( \{ r(s_{t,l}) \} \)，这里t表示帧内的time step，即每一帧采取一个action为一个time step，\(l\)是帧号。根据 $${a_{t,l}} = \arg \mathop {\max }\limits_a p(a|{s_{t,l}};{W_{RL}})$$ 得到状态\(s_{t,l}\)下的action \(a_{t,l}\)。当模拟跟踪结束时，根据groundtruth \( \{G\} \)计算跟踪score \( \{z_{t,l} \} \)，在模拟跟踪上， \(z_{t,l}=r(s_{T_l,l})\)只计算终止状态下的reward，跟踪到则reward为1，跟踪失败为-1。网络参数通过$$\Delta {W_{RL}} \propto \sum {\sum {\frac{\partial \log p({a_{t,l}}|{s_{t,l}};{W_{RL}})}{\partial {W_{RL}}}} } {z_{t,l}}$$ 最大化期望tracking score来更新。从更新情况可以看出，它的Loss Function为$${L_{RL}} \propto \sum {\sum {\log p({a_{t,l}}|{s_{t,l}};{W_{RL}})} } {z_{t,l}}$$ 就是最大化\(z_{t,l}\)。 RL训练的另一个好处是适用半监督学习的情况。当样本只有部分被标记时，只需要比较标记帧的跟踪情况，同样也可以训练。如下图所示，只有#160，#190和#220的帧有标记时，#190跟踪成功，161~190帧的tracking score都为+1，#220跟踪失败，那么191~220帧的tracking score都为-1。 在线自适应更新网络与最近许多工作类似，通过在当前位置采样进行网络fine-tuning。具体见论文（略）。 实验结果 结果还是很不错的。 Reference[1] Sangdoo et al. Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning[2] Visual Tracker Benchmark]]></content>
+      <tags>
+        <tag>paper</tag>
+      </tags>
+  </entry>
+</search>
