@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EvilGod&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.hoo.space/"/>
+  <updated>2017-06-04T06:49:35.755Z</updated>
+  <id>http://blog.hoo.space/</id>
+  
+  <author>
+    <name>EvilGod</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装Caffe遇到的一些问题</title>
+    <link href="http://blog.hoo.space/2017/06/04/caffe-issues/"/>
+    <id>http://blog.hoo.space/2017/06/04/caffe-issues/</id>
+    <published>2017-06-04T06:41:10.198Z</published>
+    <updated>2017-06-04T06:49:35.755Z</updated>
+    
+    <summary type="html">
+    
+      continued...
+    
+    </summary>
+    
+    
+      <category term="caffe issues" scheme="http://blog.hoo.space/tags/caffe-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>处理hexo和MathJax兼容的问题</title>
+    <link href="http://blog.hoo.space/2017/06/04/%E5%A4%84%E7%90%86hexo%E5%92%8CMathJax%E5%85%BC%E5%AE%B9%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://blog.hoo.space/2017/06/04/处理hexo和MathJax兼容的问题/</id>
+    <published>2017-06-04T02:09:53.569Z</published>
+    <updated>2017-06-04T02:25:42.135Z</updated>
+    
+    <summary type="html">
+    
+      ok
+    
+    </summary>
+    
+    
+      <category term="hexo issues" scheme="http://blog.hoo.space/tags/hexo-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning</title>
+    <link href="http://blog.hoo.space/2017/06/03/adnet/"/>
+    <id>http://blog.hoo.space/2017/06/03/adnet/</id>
+    <published>2017-06-03T11:30:21.860Z</published>
+    <updated>2017-06-04T05:09:01.170Z</updated>
+    
+    <summary type="html">
+    
+      ok
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="http://blog.hoo.space/tags/paper/"/>
+    
+  </entry>
+  
+</feed>
