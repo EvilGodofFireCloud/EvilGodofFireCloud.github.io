@@ -95,23 +95,23 @@
 
 
 
-<meta name="description" content="ok">
+<meta name="description" content="本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。">
 <meta name="keywords" content="paper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning">
 <meta property="og:url" content="http://blog.hoo.space/2017/06/03/adnet/index.html">
 <meta property="og:site_name" content="EvilGod&#39;s Blog">
-<meta property="og:description" content="ok">
+<meta property="og:description" content="本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。">
 <meta property="og:image" content="http://blog.hoo.space/images/adnet/adnet.JPG">
 <meta property="og:image" content="http://blog.hoo.space/images/adnet/actions.JPG">
 <meta property="og:image" content="http://blog.hoo.space/images/adnet/equ.JPG">
 <meta property="og:image" content="http://blog.hoo.space/images/adnet/equ5.JPG">
 <meta property="og:image" content="http://blog.hoo.space/images/adnet/semisupervised.JPG">
 <meta property="og:image" content="http://blog.hoo.space/images/adnet/experiment.JPG">
-<meta property="og:updated_time" content="2017-06-04T05:09:01.170Z">
+<meta property="og:updated_time" content="2017-06-05T02:17:56.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning">
-<meta name="twitter:description" content="ok">
+<meta name="twitter:description" content="本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。">
 <meta name="twitter:image" content="http://blog.hoo.space/images/adnet/adnet.JPG">
 
 
@@ -371,7 +371,7 @@
 
           
               <div class="post-description">
-                  ok
+                  本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。
               </div>
           
 
@@ -386,7 +386,7 @@
 
       
         <h1 id="论文阅读：Action-Decision-Networks-for-Visual-Tracking-with-Deep-Reinforcement-Learning"><a href="#论文阅读：Action-Decision-Networks-for-Visual-Tracking-with-Deep-Reinforcement-Learning" class="headerlink" title="论文阅读：Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning"></a>论文阅读：Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning</h1><p>本文使用深度强化学习来解决目标跟踪。项目地址:<a href="https://sites.google.com/view/cvpr2017-adnet" target="_blank" rel="external">https://sites.google.com/view/cvpr2017-adnet</a></p>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。<br><a id="more"></a> </p>
 <h1 id="问题设置"><a href="#问题设置" class="headerlink" title="问题设置"></a>问题设置</h1><p><img src="/images/adnet/adnet.JPG" alt="网络架构" title="Fig.1 本文提出的ADNet网络架构"></p>
 <p>本文提出的ADNet网络架构如Fig.1。本文使用ADNet预测动作，根据预测的动作确定下一帧的目标的位置。本文使用Deep Reinforcement Learning的定义如下。</p>
 <p><strong>Action</strong> 本文使用了11个Action。分别是向左，向上，向右和向下四种方向以及2倍距离的这四种方向。其余三种Action分别是尺度变小，尺度变大，以及终止（在每一帧网络都会顺序输出若干个action，当action是<strong>终止</strong>时完成此帧的跟踪），如Fig.2所示。每个Action使用11维的向量进行one-hot编码，如\((1,0,0,0,0,0,0,0,0,0,0)\)，\((0,1,0,0,0,0,0,0,0,0,0)\)等。</p>
@@ -722,6 +722,8 @@
   
 
 
+  
+
 
 
 
@@ -749,6 +751,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

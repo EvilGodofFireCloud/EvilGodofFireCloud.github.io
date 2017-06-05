@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.hoo.space/"/>
-  <updated>2017-06-04T06:49:35.755Z</updated>
+  <updated>2017-06-05T02:20:27.270Z</updated>
   <id>http://blog.hoo.space/</id>
   
   <author>
@@ -20,11 +20,18 @@
     <link href="http://blog.hoo.space/2017/06/04/caffe-issues/"/>
     <id>http://blog.hoo.space/2017/06/04/caffe-issues/</id>
     <published>2017-06-04T06:41:10.198Z</published>
-    <updated>2017-06-04T06:49:35.755Z</updated>
+    <updated>2017-06-05T02:20:27.270Z</updated>
     
     <summary type="html">
     
-      continued...
+      &lt;h3 id=&quot;所有问题&quot;&gt;&lt;a href=&quot;#所有问题&quot; class=&quot;headerlink&quot; title=&quot;所有问题&quot;&gt;&lt;/a&gt;所有问题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;形如&lt;b&gt;“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”&lt;/b&gt;的问题。&lt;ol&gt;
+&lt;li&gt;参考&lt;a href=&quot;http://answers.opencv.org/question/35642/libtiff_40-link-errors/&quot; style=&quot;color:red&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;opencv论坛&lt;/a&gt;的方法&lt;/li&gt;
+&lt;li&gt;如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;conda remove libtiff&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -38,11 +45,11 @@
     <link href="http://blog.hoo.space/2017/06/04/%E5%A4%84%E7%90%86hexo%E5%92%8CMathJax%E5%85%BC%E5%AE%B9%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://blog.hoo.space/2017/06/04/处理hexo和MathJax兼容的问题/</id>
     <published>2017-06-04T02:09:53.569Z</published>
-    <updated>2017-06-04T02:25:42.135Z</updated>
+    <updated>2017-06-05T02:38:40.116Z</updated>
     
     <summary type="html">
     
-      ok
+      在用MathJax处理公式的时候发现一个问题，如果有两个含有下划线的公式，会解析错误。
     
     </summary>
     
@@ -56,11 +63,11 @@
     <link href="http://blog.hoo.space/2017/06/03/adnet/"/>
     <id>http://blog.hoo.space/2017/06/03/adnet/</id>
     <published>2017-06-03T11:30:21.860Z</published>
-    <updated>2017-06-04T05:09:01.170Z</updated>
+    <updated>2017-06-05T02:17:56.293Z</updated>
     
     <summary type="html">
     
-      ok
+      本文提出的算法可以利用深度强化学习逐帧地通过执行动作预测目标位置。相比于其它基于深度学习的方法，它具有计算量小，同时可以保持高的跟踪精度（体现在位置和尺度上）。其快速版本可以达到15FPS的跟踪速度。
     
     </summary>
     

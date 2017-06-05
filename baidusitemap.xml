@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://blog.hoo.space/2017/06/04/%E5%A4%84%E7%90%86hexo%E5%92%8CMathJax%E5%85%BC%E5%AE%B9%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-06-05T02:38:40.116Z</lastmod>
+    <data>
+        <display>
+        <title>处理hexo和MathJax兼容的问题</title>
+        <pubTime>2017-06-04T02:09:53.569Z</pubTime>
+        
+        <tag>hexo issues</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.hoo.space/2017/06/04/caffe-issues/</loc>
-    <lastmod>2017-06-04T06:49:35.755Z</lastmod>
+    <lastmod>2017-06-05T02:20:27.270Z</lastmod>
     <data>
         <display>
         <title>安装Caffe遇到的一些问题</title>
@@ -20,10 +37,9 @@
     </url>
 
     
-    
   <url>
     <loc>http://blog.hoo.space/2017/06/03/adnet/</loc>
-    <lastmod>2017-06-04T05:09:01.170Z</lastmod>
+    <lastmod>2017-06-05T02:17:56.293Z</lastmod>
     <data>
         <display>
         <title>Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning</title>
@@ -38,20 +54,4 @@
     </url>
 
     
-  <url>
-    <loc>http://blog.hoo.space/2017/06/04/%E5%A4%84%E7%90%86hexo%E5%92%8CMathJax%E5%85%BC%E5%AE%B9%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2017-06-04T02:25:42.135Z</lastmod>
-    <data>
-        <display>
-        <title>处理hexo和MathJax兼容的问题</title>
-        <pubTime>2017-06-04T02:09:53.569Z</pubTime>
-        
-        <tag>hexo issues</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
