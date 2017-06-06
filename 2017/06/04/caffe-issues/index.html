@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="所有问题 形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff">
+<meta name="description" content="所有问题形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff">
 <meta name="keywords" content="caffe issues">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装Caffe遇到的一些问题">
+<meta property="og:title" content="安装或运行Caffe遇到的一些问题">
 <meta property="og:url" content="http://blog.hoo.space/2017/06/04/caffe-issues/index.html">
 <meta property="og:site_name" content="EvilGod&#39;s Blog">
-<meta property="og:description" content="所有问题 形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff">
-<meta property="og:updated_time" content="2017-06-05T02:20:27.270Z">
+<meta property="og:description" content="所有问题形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff">
+<meta property="og:updated_time" content="2017-06-06T02:58:26.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装Caffe遇到的一些问题">
-<meta name="twitter:description" content="所有问题 形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff">
+<meta name="twitter:title" content="安装或运行Caffe遇到的一些问题">
+<meta name="twitter:description" content="所有问题形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。 参考opencv论坛的方法 如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令1conda remove libtiff">
 
 
 
@@ -139,7 +139,7 @@
 
 
 
-  <title>安装Caffe遇到的一些问题 | EvilGod's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>安装或运行Caffe遇到的一些问题 | EvilGod's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">安装Caffe遇到的一些问题</h1>
+          <h1 class="post-title" itemprop="name headline">安装或运行Caffe遇到的一些问题</h1>
         
 
         <div class="post-meta">
@@ -346,7 +346,7 @@
 
           
           
-             <span id="/2017/06/04/caffe-issues/" class="leancloud_visitors" data-flag-title="安装Caffe遇到的一些问题">
+             <span id="/2017/06/04/caffe-issues/" class="leancloud_visitors" data-flag-title="安装或运行Caffe遇到的一些问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,15 +374,52 @@
       
 
       
-        <h3 id="所有问题"><a href="#所有问题" class="headerlink" title="所有问题"></a>所有问题</h3><ul>
-<li>形如<b>“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”</b>的问题。<ol>
+        <h2 id="所有问题"><a href="#所有问题" class="headerlink" title="所有问题"></a>所有问题</h2><h3 id="形如“undefined-reference-to-TIFFRGBAImageOK-LIBTIFF-4-0”的问题。"><a href="#形如“undefined-reference-to-TIFFRGBAImageOK-LIBTIFF-4-0”的问题。" class="headerlink" title="形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。"></a>形如<b>“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”</b>的问题。</h3><ol>
 <li>参考<a href="http://answers.opencv.org/question/35642/libtiff_40-link-errors/" style="color:red" target="_blank" rel="external">opencv论坛</a>的方法</li>
 <li>如果装了anaconda的话，可能与anaconda的tiff库冲突，使用下列命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda remove libtiff</div></pre></td></tr></table></figure>
 </li>
 </ol>
-</li>
-</ul>
 <a id="more"></a> 
+<h3 id="No-module-named-caffe"><a href="#No-module-named-caffe" class="headerlink" title="No module named caffe"></a>No module named caffe</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export PYTHONPATH=$CAFFEROOT/<span class="keyword">python</span>:$PYTHONPATH</div></pre></td></tr></table></figure>
+<h3 id="ImportError-libcudart-so-0-cannot-open-shared-object-file-No-such-file-or-directory"><a href="#ImportError-libcudart-so-0-cannot-open-shared-object-file-No-such-file-or-directory" class="headerlink" title="ImportError: libcudart.so.*.0: cannot open shared object file: No such file or directory"></a>ImportError: libcudart.so.*.0: cannot open shared object file: No such file or directory</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">vim</span> /etc/ld.<span class="keyword">so</span>.<span class="keyword">conf</span> </div><div class="line">/usr/local/cuda-<span class="number">7.0</span>/lib64  #添加这行，具体看cuda版本</div><div class="line">ldconfig</div></pre></td></tr></table></figure>
+<h3 id="no-module-named-cv2"><a href="#no-module-named-cv2" class="headerlink" title="no module named cv2"></a>no module named cv2</h3><ol>
+<li><p>没装python-opencv</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">python</span>-opencv</div></pre></td></tr></table></figure>
+</li>
+<li><p>或者</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install -<span class="keyword">c</span> http<span class="variable">s:</span>//conda.binstar.org/menpo opencv</div></pre></td></tr></table></figure>
+</li>
+<li><p>或者将cv2.so copy到anaconda目录下</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cp</span> /usr/lib/python2.<span class="number">7</span>/dist-packages/cv2.<span class="keyword">so</span> $ANACONDA_HOME/lib/python2.<span class="number">7</span>/site-packages/</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="version-GLIBCXX-3-4-21’-not-found"><a href="#version-GLIBCXX-3-4-21’-not-found" class="headerlink" title="version `GLIBCXX_3.4.21’ not found"></a>version `GLIBCXX_3.4.21’ not found</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.<span class="keyword">so</span>.<span class="number">6</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6"</span> &gt;&gt; ~/.bashrc</div></pre></td></tr></table></figure>
+<h3 id="File-already-exists-in-database-caffe-proto"><a href="#File-already-exists-in-database-caffe-proto" class="headerlink" title="File already exists in database: caffe.proto"></a>File already exists in database: caffe.proto</h3><ol>
+<li><p>卸载protobuf，从’<a href="https://github.com/google/protobuf&#39;重新下载安装protobuf" target="_blank" rel="external">https://github.com/google/protobuf&#39;重新下载安装protobuf</a></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./autogen.<span class="keyword">sh</span></div><div class="line">./configure --disable-shared CPPFLAGS=<span class="string">"-fPIC"</span></div><div class="line"><span class="keyword">make</span></div><div class="line">sudo <span class="keyword">make</span> install</div></pre></td></tr></table></figure>
+</li>
+<li><p>重装opencv</p>
+</li>
+</ol>
+<h3 id="registry-count-type-0-1-vs-0-Layer-type-Convolution-already-registered"><a href="#registry-count-type-0-1-vs-0-Layer-type-Convolution-already-registered" class="headerlink" title="registry.count(type) == 0 (1 vs. 0) Layer type Convolution already registered."></a>registry.count(type) == 0 (1 vs. 0) Layer type Convolution already registered.</h3><ol>
+<li>有可能是在同时使用不同版本的caffe，注释掉后调用的caffe(include/layer_factory.hpp),或者全部caffe里面都注释，重新make。<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">AddCreator</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; type, Creator creator)</span> </span>&#123;</div><div class="line">    CreatorRegistry&amp; registry = Registry();</div><div class="line">    <span class="comment">//comment these 2 lines</span></div><div class="line">    <span class="comment">// CHECK_EQ(registry.count(type), 0)</span></div><div class="line">    <span class="comment">//     &lt;&lt; "Layer type " &lt;&lt; type &lt;&lt; " already registered.";</span></div><div class="line">    registry[type] = creator;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="fatal-error-caffe-proto-caffe-pb-h-No-such-file-or-directory"><a href="#fatal-error-caffe-proto-caffe-pb-h-No-such-file-or-directory" class="headerlink" title="fatal error: caffe/proto/caffe.pb.h: No such file or directory"></a>fatal error: caffe/proto/caffe.pb.h: No such file or directory</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod <span class="number">777</span> -R caffe</div></pre></td></tr></table></figure>
+<h3 id="usr-lib-x86-64-linux-gnu-libunwind-so-8-undefined-reference-to-‘lzma-index-uncompressed-size-XZ-5-0’"><a href="#usr-lib-x86-64-linux-gnu-libunwind-so-8-undefined-reference-to-‘lzma-index-uncompressed-size-XZ-5-0’" class="headerlink" title="/usr/lib/x86_64-linux-gnu//libunwind.so.8: undefined reference to ‘lzma_index_uncompressed_size@XZ_5.0’"></a>/usr/lib/x86_64-linux-gnu//libunwind.so.8: undefined reference to ‘lzma_index_uncompressed_size@XZ_5.0’</h3><ol>
+<li><p>查看liblzma的位置</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ldconfig -<span class="keyword">p</span> | <span class="keyword">grep</span> liblzma* #查看命令</div><div class="line">export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu #在/lib下</div><div class="line">export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/ #也可能在/usr/lib下</div></pre></td></tr></table></figure>
+</li>
+<li><p>从其他没问题的电脑copy所有liblzma*到上面得到的位置（网上其他方法试了不行，这个可以）。然后执行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="build-release-lib-libcaffe-so-undefined-reference-to-‘google-protobuf-io-CodedOutputStream-WriteVarint64ToArray-unsigned-long-long-unsigned-char-’"><a href="#build-release-lib-libcaffe-so-undefined-reference-to-‘google-protobuf-io-CodedOutputStream-WriteVarint64ToArray-unsigned-long-long-unsigned-char-’" class="headerlink" title="build_release/lib/libcaffe.so: undefined reference to ‘google::protobuf::io::CodedOutputStream::WriteVarint64ToArray(unsigned long long, unsigned char*)’"></a>build_release/lib/libcaffe.so: undefined reference to ‘google::protobuf::io::CodedOutputStream::WriteVarint64ToArray(unsigned long long, unsigned char*)’</h3><ol>
+<li>用gcc5或者更新的编译器重新编译</li>
+</ol>
+<h3 id="cv-imread-cv-String-const-amp-int-’-build-release-lib-libcaffe-so-undefined-reference-to-cv-imencode-cv-String-const-amp-cv-InputArray-const-amp-std-vector-amp-std-vector-const-amp-’"><a href="#cv-imread-cv-String-const-amp-int-’-build-release-lib-libcaffe-so-undefined-reference-to-cv-imencode-cv-String-const-amp-cv-InputArray-const-amp-std-vector-amp-std-vector-const-amp-’" class="headerlink" title="cv::imread(cv::String const&amp;, int)’ .build_release/lib/libcaffe.so: undefined reference to cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector&amp;, std::vector const&amp;)’"></a>cv::imread(cv::String const&amp;, int)’ .build_release/lib/libcaffe.so: undefined reference to cv::imencode(cv::String const&amp;, cv::_InputArray const&amp;, std::vector<unsigned char,="" std::allocator="">&amp;, std::vector<int, std::allocator=""> const&amp;)’</int,></unsigned></h3><ol>
+<li>存在多个版本的opencv,查看使用哪个位置的opencv</li>
+</ol>
 
       
     </div>
@@ -604,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#所有问题"><span class="nav-number">1.</span> <span class="nav-text">所有问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#所有问题"><span class="nav-number">1.</span> <span class="nav-text">所有问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#形如“undefined-reference-to-TIFFRGBAImageOK-LIBTIFF-4-0”的问题。"><span class="nav-number">1.1.</span> <span class="nav-text">形如“undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0”的问题。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#No-module-named-caffe"><span class="nav-number">1.2.</span> <span class="nav-text">No module named caffe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ImportError-libcudart-so-0-cannot-open-shared-object-file-No-such-file-or-directory"><span class="nav-number">1.3.</span> <span class="nav-text">ImportError: libcudart.so.*.0: cannot open shared object file: No such file or directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#no-module-named-cv2"><span class="nav-number">1.4.</span> <span class="nav-text">no module named cv2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#version-GLIBCXX-3-4-21’-not-found"><span class="nav-number">1.5.</span> <span class="nav-text">version `GLIBCXX_3.4.21’ not found</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-already-exists-in-database-caffe-proto"><span class="nav-number">1.6.</span> <span class="nav-text">File already exists in database: caffe.proto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#registry-count-type-0-1-vs-0-Layer-type-Convolution-already-registered"><span class="nav-number">1.7.</span> <span class="nav-text">registry.count(type) == 0 (1 vs. 0) Layer type Convolution already registered.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fatal-error-caffe-proto-caffe-pb-h-No-such-file-or-directory"><span class="nav-number">1.8.</span> <span class="nav-text">fatal error: caffe/proto/caffe.pb.h: No such file or directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usr-lib-x86-64-linux-gnu-libunwind-so-8-undefined-reference-to-‘lzma-index-uncompressed-size-XZ-5-0’"><span class="nav-number">1.9.</span> <span class="nav-text">/usr/lib/x86_64-linux-gnu//libunwind.so.8: undefined reference to ‘lzma_index_uncompressed_size@XZ_5.0’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-release-lib-libcaffe-so-undefined-reference-to-‘google-protobuf-io-CodedOutputStream-WriteVarint64ToArray-unsigned-long-long-unsigned-char-’"><span class="nav-number">1.10.</span> <span class="nav-text">build_release/lib/libcaffe.so: undefined reference to ‘google::protobuf::io::CodedOutputStream::WriteVarint64ToArray(unsigned long long, unsigned char*)’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cv-imread-cv-String-const-amp-int-’-build-release-lib-libcaffe-so-undefined-reference-to-cv-imencode-cv-String-const-amp-cv-InputArray-const-amp-std-vector-amp-std-vector-const-amp-’"><span class="nav-number">1.11.</span> <span class="nav-text">cv::imread(cv::String const&, int)’ .build_release/lib/libcaffe.so: undefined reference to cv::imencode(cv::String const&, cv::_InputArray const&, std::vector&, std::vector const&)’</span></a></li></ol></li></ol></div>
             
 
           </div>
