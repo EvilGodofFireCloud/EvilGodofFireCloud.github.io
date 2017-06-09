@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.hoo.space/"/>
-  <updated>2017-06-06T02:58:26.295Z</updated>
+  <updated>2017-06-09T03:17:21.730Z</updated>
   <id>http://blog.hoo.space/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pytorch上手， 使用pytorch对叶子分类</title>
+    <link href="http://blog.hoo.space/2017/06/09/leafnet/"/>
+    <id>http://blog.hoo.space/2017/06/09/leafnet/</id>
+    <published>2017-06-09T02:35:18.522Z</published>
+    <updated>2017-06-09T03:17:21.730Z</updated>
+    
+    <summary type="html">
+    
+      该项目是[kaggle](https://www.kaggle.com/c/leaf-classification/)上的一个项目。数据集包含1584张二值化图片，包含训练集和测试集，除此之外，网站还提供了叶子的形状，纹理等共192维的属性特征。本实验使用卷积神经网络和对属性特征进行融合进行分类。
+    
+    </summary>
+    
+    
+      <category term="pytorch" scheme="http://blog.hoo.space/tags/pytorch/"/>
+    
+      <category term="coding" scheme="http://blog.hoo.space/tags/coding/"/>
+    
+  </entry>
   
   <entry>
     <title>安装或运行Caffe遇到的一些问题</title>
