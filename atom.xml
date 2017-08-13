@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.hoo.space/"/>
-  <updated>2017-06-09T14:41:30.341Z</updated>
+  <updated>2017-08-13T15:50:10.079Z</updated>
   <id>http://blog.hoo.space/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>caffe softmax_loss_layer详解</title>
+    <link href="http://blog.hoo.space/2017/08/13/caffe-softmax-loss/"/>
+    <id>http://blog.hoo.space/2017/08/13/caffe-softmax-loss/</id>
+    <published>2017-08-13T13:48:53.417Z</published>
+    <updated>2017-08-13T15:50:10.079Z</updated>
+    
+    <summary type="html">
+    
+      结合公式对caffe中的Softmax Loss Layer讲解
+    
+    </summary>
+    
+    
+      <category term="caffe" scheme="http://blog.hoo.space/tags/caffe/"/>
+    
+  </entry>
   
   <entry>
     <title>pytorch上手， 使用pytorch对叶子分类</title>
